@@ -1,12 +1,9 @@
 <h1>Bookings</h1>
 
-
-
 <p>info about this booking:</p>
+<p><li>Renter: <%= current_renter.name%> </p>
+<p><li>Dog: <%= @dog.name%></p>
 <p><li>Location: <%= @booking.location%> </p>
 <p><li>Date: <%= @booking.date%> </p>
-<p><li>Dog: <%= @dog.name%></p>
-
-
 <p>Do you want to cancel this booking?</p>
 <p><%= link_to "cancel booking","/bookings/destroy" %></p>

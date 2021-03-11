@@ -1,13 +1,10 @@
 <h1>Create a booking!</h1>
 
-
 <% if @errors %>
-
 <% @errors.each do |error| %>
 <p><%= error%></p>
 <% end %>
 <% end %>
-
 <%=form_for @new_booking do |f| %>
 <%=f.label :pet %><br>
 <%=f.collection_select :pet_id, @pets, :id, :name%><br>
@@ -16,6 +13,6 @@
 <%=f.label :location %><br>
 <%=f.text_field :location%><br>
 <%=f.hidden_field :renter_id, :value => @current_renter %>
-<%=f.submit%>
+<%=f.submit('create booking', style: "width:150px;height:250;background-color:#FD6156;font-family: 'BreeSerif-Regular', BreeSerif-Regular, sans-serif;color: #FFFFFF;padding: 10px;border-radius: 10px;border:0px;font-size: 15px;position: relative;margin-top: 10px;")%>
 <%end%>
 

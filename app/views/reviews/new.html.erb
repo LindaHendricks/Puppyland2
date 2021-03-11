@@ -10,7 +10,7 @@
 <%= f.label :pet_id %><br>
 <%= f.collection_select :pet_id, @pets, :id, :name %><br>
 <%=f.hidden_field :renter_id, :value => @current_renter %>
-<%= f.submit %>
+<%= f.submit('create review', style: "width:150px;height:250;background-color:#FD6156;font-family: 'BreeSerif-Regular', BreeSerif-Regular, sans-serif;color: #FFFFFF;padding: 10px;border-radius: 10px;border:0px;font-size: 15px;position: relative;margin-top: 10px;")%>
 <% end %>
 
 
