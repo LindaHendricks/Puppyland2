@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   get "/renters/login", to: "renters#login", as: "login"  
   post "renters/handle_login", to: "renters#handle_login"  
   get "/renters/profile", to: "renters#profile", as: "profile" 
+  get "/renters/logout", to: "renters#destroy", as: "logout"
+  get "/renters/goodbye", to: "renters#goodbye", as: "goodbye" 
   resources :renters
 
   get "/pets/petslist", to: "pets#petslist", as: "petslist"

@@ -25,11 +25,14 @@
       <% if logged_in? %>
       <li><%=link_to "profile", '/renters/profile' %>
       <%=link_to "browse", '/pets/petslist' %>
-      <%=link_to "logout", '/pets/petslist' %>
+      <%=link_to "logout", '/renters/logout'%>
     <%end%>
     </ul>
   </div>
 </header
+
+
+
 
     <%= yield %>
   </body>

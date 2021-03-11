@@ -21,6 +21,14 @@ class RentersController < ApplicationController
         @current_user_booking_to_edit = session[:renter_id]
     end 
 
+    def destroy
+        session[:renter_id] = nil
+        redirect_to "/renters/goodbye"
+    end
+
+    def goodbye
+    end
+
     def update 
 
         # updated_current_user = session[:renter_id]

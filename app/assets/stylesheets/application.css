@@ -15,22 +15,31 @@
  */
 
  body {
-    font-family: 'BreeSerif-Regular', BreeSerif-Regular, sans-serif;
-    font-size: 15px;
-    background: #ffffff;
-    font-weight: 300;
-    color: #FD6156;
-  }
+  font-family: 'BreeSerif-Regular', BreeSerif-Regular, sans-serif;
+  font-size: 15px;
+  background: #ffffff;
+  font-weight: 300;
+  color: #FD6156;
+}
 
-  h1 {
-    font-family: 'BreeSerif-Regular', BreeSerif-Regular, sans-serif;
-    font-size: 60px;
-    background: #ffffff;
-    font-weight: 300;
-    color: #FD6156;
-  }
+h2 {
+  font-family: 'BreeSerif-Regular', BreeSerif-Regular, sans-serif;
+  font-size: 60px;
+  background: #ffffff;
+  font-weight: 300;
+  color: #FD6156;
+  max-width: 64em;
+  margin: auto;
+}
 
-  @font-face {
-    font-family: 'Bree-Serif';
-    src: url('BreeSerif-Regular.ttf');
- }
+@font-face {
+  font-family: 'Bree-Serif';
+  src: url('BreeSerif-Regular.ttf');
+}
+
+form {
+max-width: 64em;
+margin: auto;
+text-align: center;
+}
+
