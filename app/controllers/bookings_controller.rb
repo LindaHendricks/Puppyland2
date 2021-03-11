@@ -14,25 +14,18 @@ class BookingsController < ApplicationController
 
     def create
         new_booking = Booking.create(booking_params)
-        # if new_booking.valid?
-        redirect_to booking_path(new_booking) #put the params to arrive to the booking of the user
-        # else
-        #     flash[:errors] = new_booking.errors.full_messages
-        #     redirect_to new_booking_path
-        # end 
+        if new_booking.valid?
+            redirect_to booking_path(new_booking) #put the params to arrive to the booking of the user
+        else
+            flash[:errors] = new_booking.errors.full_messages
+            redirect_to new_booking_path
+        end 
     end 
 
     def show
         @booking = Booking.find(params[:id])
         @dog = Pet.find(@booking.pet_id)
     end
-
-   
-
-    # def show 
-    #     byebug
-    #     @booking = Booking.find(params[:id])
-    # end 
 
     def cancel_confirmation
     end
@@ -46,13 +39,12 @@ class BookingsController < ApplicationController
         updated_booking = Booking.find(params[:id])
         updated_booking.update(booking_params)
 
-        # if updated_booking.valid?
-        #     redirect_to booking_path
-        # else
-        #     flash[:errors] = updated_booking.errors.full_messages
-        #     redirect_to edit_booking_path(updated_booking)
-        # end 
-    
+        if updated_booking.valid?
+            redirect_to booking_path
+        else
+            flash[:errors] = updated_booking.errors.full_messages
+            redirect_to edit_booking_path(updated_booking)
+        end 
     end 
 
     def destroy
@@ -62,7 +54,6 @@ class BookingsController < ApplicationController
     end 
 
 private 
-
     def booking_params
         params.require(:booking).permit(:location, :date, :pet_id, :renter_id)
     end 

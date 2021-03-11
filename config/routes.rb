@@ -15,13 +15,10 @@ Rails.application.routes.draw do
   get "/pets/search_by_name", to: "pets#search_by_name", as: "search_by_name"
   get "/pets/index", to: "pets#index", as: "pets"
   get "/pet/:id", to: "pets#show", as: "pet"
-
  
   get "/bookings/cancel_confirmation", to: 
   "bookings#cancel_confirmation", as: "cancel"
-
-#  delete 'booking/:id', to: 'bookings#destroy'
-
+  
   resources :bookings
 
   #resources :reviews

@@ -7,5 +7,9 @@ class Renter < ApplicationRecord
 
     has_secure_password
 
-    #validates :username, presence: true,   uniqueness: true
+    validates :username, presence: true,   uniqueness: true
+    validates :name, presence: true
+    validates :age, presence: true
+    validates :phone_number, presence: true
+    validates :address, presence: true
 end

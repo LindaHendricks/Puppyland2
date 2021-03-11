@@ -2,6 +2,7 @@ class RentersController < ApplicationController
     
     def new_user
         @renter = Renter.new
+        @errors = flash[:errors] 
     end
 
     def welcome
@@ -11,7 +12,12 @@ class RentersController < ApplicationController
     def create
         @renter = Renter.create(new_renter_params)
         session[:renter_id] = @renter.id
-        redirect_to profile_path
+        if @renter.valid?
+            redirect_to profile_path
+        else
+            flash[:errors] = @renter.errors.full_messages
+            redirect_to "/renters/new_user"
+        end
     end
     
     def show 

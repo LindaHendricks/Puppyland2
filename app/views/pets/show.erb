@@ -12,7 +12,7 @@ Do you want to book me ?</>
 
 <%@reviews.each do |review|%>
 <%renter = Renter.find(review.renter_id)%>
-<li>Reviewr: <%=renter.name%><br>
+<li>Reviewer: <%=renter.name%><br>
 <li>Comment: <%=review.comment%><br>
 <li>Rating: <%= review.rating%><br><br>
 <%end%>

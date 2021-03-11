@@ -23,7 +23,7 @@ renter4 = Renter.create!(password: "blabla",username: "Leon", name: "Leon", addr
 pet1 = Pet.create!(name: "Charlay", description: "Sweet and funny", age:4, color: "Caramel", picture:" ", location: "Hoboken", breed: breed1)
 pet2 = Pet.create!(name: "Bijou", description: "Curly diva", age:3, color: "White", picture:" ", location: "Paris", breed: breed2)
 pet3 = Pet.create!(name: "Julio", description: "Speed and chic", age:1, color: "Silver", picture:" ", location: "Milano", breed: breed4)
-pet4 = Pet.create!(name: "John", description: "Charming and love spagetti", age:2, color: "black and white", picture:" ", location: "Florida", breed: breed3)
+pet4 = Pet.create!(name: "Spot", description: "Charming and love spagetti", age:2, color: "black and white", picture:" ", location: "Florida", breed: breed3)
 
 
 Review.create!(comment: "That was an horrible puppy!! Don’t rent him is spoiled!", rating:1, date:"24th of december", animal: pet2, human: renter2) 
