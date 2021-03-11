@@ -8,6 +8,7 @@ class ReviewsController < ApplicationController
         @review = Review.new
         @pets = Pet.all
         @renters = Renter.all
+        @current_renter = session[:renter_id] 
     end  
    
 

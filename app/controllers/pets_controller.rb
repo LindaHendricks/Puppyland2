@@ -20,7 +20,6 @@ class PetsController < ApplicationController
         # end 
     end 
     def petslist
-        #byebug
         @pets = Pet.all
         @found_pet = Pet.search(params[:search])
     end

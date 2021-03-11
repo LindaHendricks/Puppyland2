@@ -3,6 +3,12 @@ Booking.destroy_all
 Renter.destroy_all
 Pet.destroy_all
 Breed.destroy_all
+Review.reset_pk_sequence
+Booking.reset_pk_sequence
+Renter.reset_pk_sequence
+Pet.reset_pk_sequence
+Breed.reset_pk_sequence
+
 
 breed1 = Breed.create!(name: "Vizsla", description: "Hungarian hunting dog")
 breed2 = Breed.create!(name: "Poddle", description: "Fluffy soft toy")

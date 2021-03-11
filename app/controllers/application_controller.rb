@@ -3,7 +3,6 @@ class ApplicationController < ActionController::Base
     helper_method :logged_in?
     helper_method :authorized
     
-
         def current_renter
             Renter.find_by(id: session[:renter_id])
         end

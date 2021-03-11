@@ -16,6 +16,12 @@ Rails.application.routes.draw do
   get "/pets/index", to: "pets#index", as: "pets"
   get "/pet/:id", to: "pets#show", as: "pet"
 
+  get "/bookings/destroy", to: "bookings#destroy", as: "destroy"
+  get "/bookings/cancel_confirmation", to: 
+  "bookings#cancel_confirmation", as: "cancel"
+ 
+  resources :bookings
+
   #resources :reviews
 
   
@@ -24,7 +30,7 @@ Rails.application.routes.draw do
   post '/reviews', to: 'reviews#create'
   #resources :pets
   #resource :bookings
-  resources :bookings
+
   #get '/bookings/', to: 'bookings#index', as: 'bookings'
   
   # get '/bookings/new', to: 'bookings#new', as: 'new_booking'
