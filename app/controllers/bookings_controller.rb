@@ -56,8 +56,8 @@ class BookingsController < ApplicationController
     end 
 
     def destroy
-        @booking = Booking.find(params[:id])        
-        @booking.destroy
+        @new_booking = Booking.find(params[:id])       
+        @new_booking.destroy
         redirect_to "/bookings/cancel_confirmation"
     end 
 

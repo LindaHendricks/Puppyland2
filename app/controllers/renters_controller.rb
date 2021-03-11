@@ -11,6 +11,7 @@ class RentersController < ApplicationController
     def create
         @renter = Renter.create(new_renter_params)
         session[:renter_id] = @renter.id
+        redirect_to profile_path
     end
     
     def show 

@@ -19,12 +19,13 @@ Rails.application.routes.draw do
  
   get "/bookings/cancel_confirmation", to: 
   "bookings#cancel_confirmation", as: "cancel"
- 
+
+#  delete 'booking/:id', to: 'bookings#destroy'
+
   resources :bookings
 
   #resources :reviews
 
-  
   get '/reviews', to: 'reviews#index', as: 'reviews'
   get '/reviews/new', to: 'reviews#new', as: 'new_review'
   post '/reviews', to: 'reviews#create'
