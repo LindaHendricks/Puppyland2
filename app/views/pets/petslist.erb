@@ -7,7 +7,7 @@ change from "petslist" to "Search"
 <% end %>  
 
 <%if @found_pet %>
-<%= @found_pet.name  %>
+<%= link_to @found_pet.name, pet_path(@found_pet)  %>
 <%end%>
 
 <%# <% @pets.each do |pet| %>
