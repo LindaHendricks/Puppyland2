@@ -8,4 +8,11 @@
 Do you want to book me ?</>
 <p><%= link_to "click here",new_booking_path %></p>
 
+<h3><%= @pet.name%> reviews: <%= %></h3>
 
+<%@reviews.each do |review|%>
+<%renter = Renter.find(review.renter_id)%>
+<li>Reviewr: <%=renter.name%><br>
+<li>Comment: <%=review.comment%><br>
+<li>Rating: <%= review.rating%><br><br>
+<%end%>

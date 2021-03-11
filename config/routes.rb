@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   get "/pets/index", to: "pets#index", as: "pets"
   get "/pet/:id", to: "pets#show", as: "pet"
 
-  get "/bookings/destroy", to: "bookings#destroy", as: "destroy"
+ 
   get "/bookings/cancel_confirmation", to: 
   "bookings#cancel_confirmation", as: "cancel"
  

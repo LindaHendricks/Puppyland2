@@ -24,9 +24,7 @@ class BookingsController < ApplicationController
 
     def show
         @booking = Booking.find(params[:id])
-        
         @dog = Pet.find(@booking.pet_id)
-        
     end
 
    
@@ -58,7 +56,7 @@ class BookingsController < ApplicationController
     end 
 
     def destroy
-        @booking = Booking.find_by(params[:id])
+        @booking = Booking.find(params[:id])        
         @booking.destroy
         redirect_to "/bookings/cancel_confirmation"
     end 

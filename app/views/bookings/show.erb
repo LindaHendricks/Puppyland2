@@ -6,4 +6,5 @@
 <p><li>Location: <%= @booking.location%> </p>
 <p><li>Date: <%= @booking.date%> </p>
 <p>Do you want to cancel this booking?</p>
-<p><%= link_to "cancel booking","/bookings/destroy" %></p>
+<p><%=link_to "cancel booking", booking_path(@booking),  method: :destroy, data: { confirm: 'Are you sure?' } %>
+

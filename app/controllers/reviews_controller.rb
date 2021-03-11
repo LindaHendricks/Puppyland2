@@ -14,7 +14,7 @@ class ReviewsController < ApplicationController
 
     def create
         review = Review.create(reviews_params)
-        redirect_to reviews_path
+        redirect_to pet_path(review.pet_id)
     end 
 
     def edit
