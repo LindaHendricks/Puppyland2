@@ -1,0 +1,6 @@
+<h1>list of all the puppies to browse in list</h1>
+
+
+<% @pets.each do |pet| %>
+<%= link_to pet.name, pet_path(pet) %><br>
+<% end %>

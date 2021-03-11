@@ -1,0 +1,28 @@
+header {
+    background: #FD6156;
+    padding: 32px;
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+    a {
+      text-decoration: none;
+      font-size: 22px;
+      font-weight: normal;
+      color: white;
+    }
+  }
+  
+  .left-nav {
+    float: left;
+        color: #FFFFFF;
+        margin:-15px
+  }
+  
+  .right-nav {
+    float: right;
+    color: #FFFFFF;
+        margin:-15px 
+  }
+

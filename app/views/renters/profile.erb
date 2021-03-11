@@ -1,0 +1,32 @@
+<% if logged_in? %>
+    <h1><%= current_renter.username.capitalize %>'s Profile</h1>
+    <h2>You are logged In, <%= current_renter.username %></h2>
+<%end%>
+
+
+
+<li>Username: <%=current_renter.username%><li>
+Name: <%=current_renter.name%><li>
+Address: <%=current_renter.address%><li>
+Age: <%=current_renter.age%><li>
+Phone Number: <%=current_renter.phone_number%><li>
+Picture: <%=current_renter.picture%>
+
+<h3>Here are your bookings: <%= %></h3>
+
+<%@bookings.each do |booking|%>
+<%= booking.date %><br>
+<%end%>
+
+<%= link_to "Add a booking review", new_review_path%> <br>
+
+<%= link_to "Update your profile here", edit_renter_path(current_renter) %>
+
+
+
+
+
+
+
+
+

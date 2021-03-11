@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lb</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%# <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %> 
+  </head>
+
+  <body>
+
+  <header class='clearfix'>
+  <div class="left-nav">
+    <ul>
+      <li><%= link_to "puppyland", '/renters/welcome' %></li>
+      
+    </ul>
+  </div>
+
+   <div class="right-nav">
+    <ul>
+      <% if logged_in? %>
+      <li><%=link_to "profile", '/renters/profile' %>
+      <%=link_to "browse", '/pets/petslist' %>
+      <%=link_to "logout", '/pets/petslist' %>
+    <%end%>
+    </ul>
+  </div>
+</header
+
+    <%= yield %>
+  </body>
+</html>
+
+

@@ -1,0 +1,11 @@
+<h1>Pets last Reviews</h1>
+
+
+
+<% @reviews.each do |review|%>
+<%= review.comment %><br>
+<% end %>
+
+<% @reviews.each do |review|%>
+<%= review.pet_id %><br>
+<% end %>

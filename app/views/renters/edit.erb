@@ -1,0 +1,20 @@
+<h1>Edit Form</h1>
+
+<h1>Update your information here</h1>
+
+<boyd>
+<%= form_for current_renter do |f|%>
+<%= f.label :name%><br>
+  <%= f.text_field :name%><br>
+  <%= f.label :address%><br>
+  <%= f.text_field :address%><br>
+  <%= f.label :age%><br>
+  <%= f.text_field :age%><br>
+  <%= f.label :phone_number%><br>
+  <%= f.text_field :phone_number%><br>
+  <%= f.label :username%><br>
+  <%= f.text_field :username%><br>
+  <%= f.label :password%><br>
+  <%= f.password_field :password%><br>
+  <%= f.submit('create renter', style: "width:150px;height:250;background-color:#FD6156;font-family: 'BreeSerif-Regular', BreeSerif-Regular, sans-serif;color: #FFFFFF;padding: 10px;border-radius: 10px;border:0px;font-size: 15px;position: relative;margin-top: 10px;") %>
+<%end%>

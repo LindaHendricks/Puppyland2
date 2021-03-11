@@ -1,0 +1,12 @@
+<h1>Hi! My name is <%= @pet.name%> !</h1>
+
+
+<p>Here is my profile:</p>
+<p>Name: <%= @pet.name%> </p>
+<p>Description: <%= @pet.description%> </p>
+<p>Color: <%= @pet.color%></p>
+<p>Location: <%= @pet.location%>! </p>
+
+
+<p>Do you want to book me ?</p>
+<p><%= link_to "click here",new_booking_path %></p>
