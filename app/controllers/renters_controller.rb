@@ -78,8 +78,7 @@ class RentersController < ApplicationController
     end
 
     def profile  
-       @bookings = current_renter.bookings  
-       #byebug         
+       @bookings = current_renter.bookings
     end
  
     private

@@ -3,12 +3,18 @@
 <p><li>Name: <%= @pet.name%> </p>
 <p><li>Description: <%= @pet.description%> </p>
 <p><li>Color: <%= @pet.color%></p>
-<p><li>Location: <%= @pet.location%>! </p>
+<p><li>Location: <%= @pet.location%>! </p><br>
 
-Do you want to book me ?</>
-<p><%= link_to "click here",new_booking_path, :class => "style_link" %></p>
+<p><%= link_to "book me!",new_booking_path, :class => "style_link" %></p><br>
 
-<h3><%= @pet.name%> reviews: <%= %></h3>
+<h3>Reviews of <%= @pet.name%>: <%= %></h3>
+
+<%stars = 0%>
+<%@reviews.each do |review|%>
+<%stars += review.rating %>
+<%end%>
+<h4>Average rating: <%=rating = (stars/@reviews.count)%> stars<h4>
+
 
 <%@reviews.each do |review|%>
 <%renter = Renter.find(review.renter_id)%>

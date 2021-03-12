@@ -41,7 +41,6 @@
 
  form {
   max-width: 64em;
-  margin: auto;
   text-align: center;
   margin: auto;
   
@@ -74,4 +73,12 @@ link {
 
 .style_button {
   font-family:'BreeSerif-Regular', BreeSerif-Regular; width:220px; height:250; color:#FFFFFF; font-size: 30px; background-color:#FD6156; border-radius: 10px;border:0px; text-decoration: none; padding: 10px;
+}
+
+.welcome_page{
+    font-family: 'BreeSerif-Regular', BreeSerif-Regular, sans-serif;
+    font-size: 60px;
+    background: #ffffff;
+    font-weight: 300;
+    color: #FD6156;"
 }

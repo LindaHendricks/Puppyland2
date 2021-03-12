@@ -2,7 +2,7 @@
 
 <p>Info about this booking:</p>
 <p><li>Renter: <%= current_renter.name%> </p>
-<p><li>Dog: <%= @dog.name%></p>
+<p><li>Dog: <%= link_to @dog.name, pet_path(@dog) %></p>
 <p><li>Location: <%= @booking.location.capitalize%> </p>
 <p><li>Date: <%= @booking.date%> </p>
 
