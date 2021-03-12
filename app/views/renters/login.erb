@@ -1,12 +1,17 @@
 <h1></h1>
 
-<h2 style ="text-align: center;">sign in</h2>
+<h2 style ="text-align: center;">sign in </h2>
 
 <%= form_tag "/renters/handle_login" do %>
    <%= label_tag :username%><br>
    <%= text_field_tag :username %><br>
    <%= label_tag :password%><br>
    <%= password_field_tag :password%><br>
-   <%= submit_tag("Submit", style: "width:150px;height:250;background-color:#FD6156;font-family: 'BreeSerif-Regular', BreeSerif-Regular, sans-serif;color: #FFFFFF;padding: 10px;border-radius: 10px;border:0px;font-size: 15px;position: relative;margin-top: 10px;") %>
+   <%= submit_tag("Submit", :class => "style_submit") %>
 <%end%>
+
+<h3 style ="text-align: center;"><%=@errors%></h3>
+
+
+
 

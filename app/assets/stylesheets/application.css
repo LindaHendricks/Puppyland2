@@ -41,6 +41,8 @@
   max-width: 64em;
   margin: auto;
   text-align: center;
+  margin: auto;
+  
 }
 
 /* 
@@ -50,4 +52,15 @@ link {
 } */
 
 
+.style_image {
 
+    width:150x; 
+    height:300px; 
+    object-position: right top;
+    
+}
+
+.style_submit {
+
+  width:150px;height:250;background-color:#FD6156;font-family: 'BreeSerif-Regular', BreeSerif-Regular, sans-serif;color: #FFFFFF;padding: 10px;border-radius: 10px;border:0px;font-size: 15px;position: relative;margin-top: 10px;
+}

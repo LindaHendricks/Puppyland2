@@ -57,18 +57,20 @@ class RentersController < ApplicationController
     def delete 
     end 
 
-
-    def login
+    def login   
+        @errors = flash[:ERROR]
+            
     end
 
     def handle_login
         @renter = Renter.find_by(username: params[:username])
-        if @renter && @renter.authenticate(params[:password])
-            session[:renter_id] = @renter.id
-            redirect_to "/pets/index"
-        else
-            redirect_to login_path
-        end
+            if @renter && @renter.authenticate(params[:password])
+                session[:renter_id] = @renter.id
+                redirect_to "/pets/index"
+            else
+                flash[:ERROR] = "Invalid Login Credentials!"
+                redirect_to "/renters/login"
+            end
     end
 
     def logout

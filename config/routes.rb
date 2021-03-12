@@ -1,5 +1,6 @@
 Rails.application.routes.draw do  
   
+  post 'twilio/sms'
   get "/renters/welcome", to: "renters#welcome", as: "welcome"
   get 'renters/new_user', to: 'renters#new_user'
   post 'renters/new_user', to: 'renters#create'
@@ -18,7 +19,7 @@ Rails.application.routes.draw do
  
   get "/bookings/cancel_confirmation", to: 
   "bookings#cancel_confirmation", as: "cancel"
-  
+
   resources :bookings
 
   #resources :reviews

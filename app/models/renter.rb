@@ -12,4 +12,5 @@ class Renter < ApplicationRecord
     validates :age, presence: true
     validates :phone_number, presence: true
     validates :address, presence: true
+    validates :password, presence: true
 end
