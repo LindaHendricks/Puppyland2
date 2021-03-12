@@ -59,7 +59,6 @@ class RentersController < ApplicationController
 
     def login   
         @errors = flash[:ERROR]
-            
     end
 
     def handle_login

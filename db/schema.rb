@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 2021_03_09_153919) do
 
   create_table "bookings", force: :cascade do |t|
     t.string "location"
-    t.string "date"
+    t.date "date"
     t.integer "pet_id", null: false
     t.integer "renter_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -58,7 +58,7 @@ ActiveRecord::Schema.define(version: 2021_03_09_153919) do
   create_table "reviews", force: :cascade do |t|
     t.string "comment"
     t.integer "rating"
-    t.string "date"
+    t.date "date"
     t.integer "pet_id", null: false
     t.integer "renter_id", null: false
     t.datetime "created_at", precision: 6, null: false

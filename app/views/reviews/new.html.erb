@@ -1,17 +1,24 @@
 <h1>Add a review </h1>
 
+<% if @errors %>
+Errors: <%@errors.each do |error| %>
+        <p><li><%= error%></p>  
+    <% end %>
+<% end %>
+
 <%= form_for @review do |f| %>
 <%= f.label :comment %><br>
 <%= f.text_field :comment %><br>
 <%= f.label :rating %><br>
-<%= f.number_field :rating %><br>
-<%= f.label :date %><br>
-<%= f.text_field :date %><br>
+<%= f.number_field :rating, min: 1, max: 5%><br>
+<%=f.label :date %><br>
+<%=f.date_select :date %><br>
 <%= f.label :pet_id %><br>
 <%= f.collection_select :pet_id, @pets, :id, :name %><br>
 <%=f.hidden_field :renter_id, :value => @current_renter %>
 <%= f.submit('create review', style: "width:150px;height:250;background-color:#FD6156;font-family: 'BreeSerif-Regular', BreeSerif-Regular, sans-serif;color: #FFFFFF;padding: 10px;border-radius: 10px;border:0px;font-size: 15px;position: relative;margin-top: 10px;")%>
 <% end %>
+
 
 
 

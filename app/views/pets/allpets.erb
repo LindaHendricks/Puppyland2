@@ -1,7 +1,12 @@
-<h1>list of all the puppies to browse in list</h1><br>
+<br>
+<h1>Discover all of our pets!</h1><br>
 <br>
 
 <% @pets.each do |pet| %>
-<li><%= link_to pet.name, pet_path(pet), style: 'width:250px; height:250; color:#FFFFFF; font-size: 30px; background-color:#FD6156; border-radius: 10px;border:0px; text-decoration: none; padding: 10px;'%><br><br><br>
+
+<%= link_to image_tag(pet.picture, :alt => "rss feed", :class => "style_image") , pet_path(pet)%>
+
+
+<%=link_to pet.name, pet_path(pet), style: 'width:250px; height:250; color:#FFFFFF; font-size: 30px; background-color:#FD6156; border-radius: 10px;border:0px; text-decoration: none; padding: 10px;'%><br><br><br>
 <% end %>
 

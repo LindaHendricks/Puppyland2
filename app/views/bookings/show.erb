@@ -1,9 +1,12 @@
 <h1>Bookings</h1>
 
-<p>info about this booking:</p>
+<p>Info about this booking:</p>
 <p><li>Renter: <%= current_renter.name%> </p>
 <p><li>Dog: <%= @dog.name%></p>
-<p><li>Location: <%= @booking.location%> </p>
+<p><li>Location: <%= @booking.location.capitalize%> </p>
 <p><li>Date: <%= @booking.date%> </p>
+
 <p>Do you want to cancel this booking?</p>
 <%= button_to 'cancel booking', { action: :destroy, id: @booking.id }, method: :delete, data: { confirm: 'Are you sure?' } %> 
+
+

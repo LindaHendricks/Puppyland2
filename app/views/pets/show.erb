@@ -12,7 +12,10 @@ Do you want to book me ?</>
 
 <%@reviews.each do |review|%>
 <%renter = Renter.find(review.renter_id)%>
+<li>Date: <%=review.date%><br>
 <li>Reviewer: <%=renter.name%><br>
 <li>Comment: <%=review.comment%><br>
 <li>Rating: <%= review.rating%><br><br>
 <%end%>
+
+<%= image_tag(@pet.picture, :alt => "rss feed", :class => "style_image") %>
