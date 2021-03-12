@@ -10,15 +10,18 @@ Age: <%=current_renter.age%><li>
 Phone Number: <%=current_renter.phone_number%><li>
 Picture: <%=current_renter.picture%>
 
+<% if @bookings%>
 <h3>Your bookings: <%= %></h3>
 
 <%@bookings.each do |booking|%>
-<li><%= link_to booking.date, booking_path(booking) %><br>
+<li><%= link_to booking.date, booking_path(booking) %><br><br>
+<%end%>
 <%end%>
 
-<br><%= link_to "Add a puppy review", new_review_path%> <br>
+<h3>Options: <%= %></h3>
+<%= link_to "Add a puppy review", new_review_path, :class => "style_link"%> <br> <br> <br>
 
-<%= link_to "Update your profile here", edit_renter_path(current_renter) %>
+<%= link_to "Update your profile here", edit_renter_path(current_renter), :class => "style_link" %>
 
 
 

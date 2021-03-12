@@ -65,4 +65,13 @@ link {
 .style_submit {
 
   width:150px;height:250;background-color:#FD6156;font-family: 'BreeSerif-Regular', BreeSerif-Regular, sans-serif;color: #FFFFFF;padding: 10px;border-radius: 10px;border:0px;font-size: 15px;position: relative;margin-top: 10px;
+
+}
+.style_link {
+  width:220px; height:250; color:#FFFFFF; font-size: 30px; background-color:#FD6156; border-radius: 10px;border:0px; text-decoration: none; padding: 10px;
+
+}
+
+.style_button {
+  font-family:'BreeSerif-Regular', BreeSerif-Regular; width:220px; height:250; color:#FFFFFF; font-size: 30px; background-color:#FD6156; border-radius: 10px;border:0px; text-decoration: none; padding: 10px;
 }

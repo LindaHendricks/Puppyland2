@@ -7,6 +7,6 @@
 <p><li>Date: <%= @booking.date%> </p>
 
 <p>Do you want to cancel this booking?</p>
-<%= button_to 'cancel booking', { action: :destroy, id: @booking.id }, method: :delete, data: { confirm: 'Are you sure?' } %> 
+<%= button_to 'cancel booking', { action: :destroy, id: @booking.id }, method: :delete, data: { confirm: 'Are you sure?' }, :class => "style_button"%> 
 
 

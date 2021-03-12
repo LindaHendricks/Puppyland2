@@ -6,13 +6,16 @@
 <p><li>Location: <%= @pet.location%>! </p>
 
 Do you want to book me ?</>
-<p><%= link_to "click here",new_booking_path %></p>
+<p><%= link_to "click here",new_booking_path, :class => "style_link" %></p>
 
 <h3><%= @pet.name%> reviews: <%= %></h3>
 
 <%@reviews.each do |review|%>
 <%renter = Renter.find(review.renter_id)%>
+
+<% if review.date %>
 <li>Date: <%=review.date%><br>
+<%end%>
 <li>Reviewer: <%=renter.name%><br>
 <li>Comment: <%=review.comment%><br>
 <li>Rating: <%= review.rating%><br><br>
