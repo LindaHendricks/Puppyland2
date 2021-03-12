@@ -46,13 +46,6 @@
   
 }
 
-/* 
-link {
-  width:220px; height:250; color:#FFFFFF; font-size: 30px; background-color:#FD6156; border-radius: 10px;border:0px; text-decoration: none; padding: 10px;
-
-} */
-
-
 .style_image {
 
     width:150x; 
@@ -72,7 +65,7 @@ link {
 }
 
 .style_button {
-  font-family:'BreeSerif-Regular', BreeSerif-Regular; width:220px; height:250; color:#FFFFFF; font-size: 30px; background-color:#FD6156; border-radius: 10px;border:0px; text-decoration: none; padding: 10px;
+  font-family:'BreeSerif-Regular', BreeSerif-Regular; width:220px; height:250; color:#FFFFFF; font-size: 20px; background-color:#FD6156; border-radius: 10px;border:0px; text-decoration: none; padding: 10px;
 }
 
 .welcome_page{

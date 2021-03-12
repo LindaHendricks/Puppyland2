@@ -3,6 +3,7 @@
     <h2>Hi, <%= current_renter.name.capitalize %></h2>
 <%end%>
 
+<h3>Your info: <%= %></h3>
 <li>Username: <%=current_renter.username%><li>
 Name: <%=current_renter.name%><li>
 Address: <%=current_renter.address%><li>
@@ -10,15 +11,15 @@ Age: <%=current_renter.age%><li>
 Phone Number: <%=current_renter.phone_number%>
 
 <% if @bookings%>
-<h3>Your bookings: <%= %></h3>
+<h4>Your bookings: <%= %></h4>
 
 <%@bookings.each do |booking|%>
-        <li><%= link_to booking.date, booking_path(booking) %><br><br>
+        <li><%= link_to booking.date, booking_path(booking) %><br>
     <%end%>
 <%end%>
 
 
-<h3>Options: <%= %></h3>
+<h5>Options: <%= %></h5>
 <%= link_to "Add a puppy review", new_review_path, :class => "style_link"%> <br> <br> <br>
 
 <%= link_to "Update your profile here", edit_renter_path(current_renter), :class => "style_link" %>

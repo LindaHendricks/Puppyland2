@@ -1,13 +1,13 @@
-change from "petslist" to "Search"
 <h1></h1>
 <h2 style ="text-align: center;">Search for Pets by Name:</h2>
     <%= form_tag(petslist_path, method: :get) do %>
-        <%= text_field_tag(:search, params[:search]) %> 
-        <%= submit_tag ("Search")%> 
+        <%= text_field_tag(:search, params[:search]) %><br> 
+        <%= submit_tag ("Search"), :class => "style_submit"%> 
 <% end %>  
 
 <%if @found_pet %>
-<li><%=link_to @found_pet.name, pet_path(@found_pet)  %>
+<%= link_to image_tag(@found_pet.picture, :alt => "rss feed", :class => "style_image"), pet_path(@found_pet) %>
+<%=link_to @found_pet.name, pet_path(@found_pet), :class => "style_link"  %>
 <%end%>
 
 
